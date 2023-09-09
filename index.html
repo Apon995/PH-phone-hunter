@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH phone.com</title>
+    <!-- --tailwind-css-- -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ---font-awsome-cdn--- -->
+    <script src="https://kit.fontawesome.com/4fe709d572.js" crossorigin="anonymous"></script>
+    <!-- --goggle-fonts-cdn-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[poppins] dark:bg-white px-[4%]">
+    <!-- --header-section-- -->
+    <header class=" bg-[#FFF]">
+        <nav class=" flex  py-4 justify-between ">
+            <h1 class="text-[#403F3F] cursor-pointer text-2xl font-bold ">Hot Gadgets</h1>
+            <button class="bg-[#0D6EFD] text-[#FFF] text-base font-medium px-4 py-2 rounded-md">sign up</button>
+
+        </nav>
+        <br>
+        <section class="flex items-center flex-col justify-center w-full">
+            <div class="text-center space-y-5">
+                <h1 class="md:text-5xl text-[#100F0F] font-bold text-[2.5rem]">Apple Iphone 13 Pro Max</h1>
+                <p class="text-[#706F6F] text-base font-medium ">There are many variations of passages of service
+                    available, but the majority have <br>
+                    suffered alteration in some form, by injected humou.</p>
+                <button class="bg-[#0D6EFD] text-[#FFF] text-base font-medium px-4 py-2 rounded-md">Buy Now</button>
+            </div>
+            <br>
+            <br>
+            <div class="flex flex-row md:gap-20 gap-8 items-center">
+                <div>
+                    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro.jpg" alt=""
+                        class="md:w-[170px] w-[200px] mx-auto">
+                </div>
+                <div>
+                    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg" alt=""
+                        class=" md:w-[220px] w-[350px] mx-auto">
+                </div>
+                <div>
+                    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg" alt="" 
+                    class="md:w-[170px] w-[200px] mx-auto">
+                </div>
+
+            </div>
+
+        </section>
+        <br>
+
+    </header>
+    <br>
+
+    <br>
+    <!-- --main-section-- -->
+    <main>
+        <div class="mx-auto lg:w-[50%] md:w-[70%] w-full  flex h-[60px] ">
+            <input type="text" name="searchbar" id="searchbar" placeholder="search phones  "
+                class="rounded-l-md md:w-[80%] w-[70%] px-2 text-black font-medium dark:bg-inherit border-[1px] border-[#adadad] outline-none">
+            <button class="bg-[#0D6EFD] text-[#FFF] text-base font-medium px-4 py-2  rounded-r-md md:w-[20%] w-[30%]"
+                onclick="searchByname()">search</button>
+        </div>
+        <br>
+        <br>
+        <section>
+            <div>
+                <h1 id="notfound" class="text-4xl text-black font-bold text-center hidden">Data is not found Try again !
+                </h1>
+            </div>
+            <div id="cardContainer" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+
+
+            </div>
+            <!-- --show-deatils-div- -->
+
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle flex items-center justify-center">
+                    <div class="modal-box bg-white dark:bg-white flex flex-col items-center md:w-fit max-w-[295px] mx-auto rounded-xl ">
+                        <div id="modalContainer">
+
+                        </div>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button
+                                    class="bg-[#0D6EFD] text-[#FFF] text-base font-medium px-4 py-2 rounded-md">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <div class="text-center hidden" id="showAllbtn">
+            <button class="bg-[#0D6EFD] text-[#FFF] text-base font-medium px-4 py-2 rounded-md" onclick="loadData(undefined,true)">show all</button>
+        </div>
+
+    </main>
+    <br>
+    <br>
+    <!-- --footer-section--- -->
+    <hr class="md:hidden block">
+    <br class="md:hidden block">
+    <footer>
+
+        <div class="w-full flex justify-between items-center md:flex-row flex-col gap-3 md:gap-0 ">
+            <div>
+                <h1 class="text-[#403F3F] cursor-pointer text-2xl font-bold ">Hot Gadgets</h1>
+                <p class="text-sm font-medium text-[#706F6F] text-center">You can definitely work.</p>
+
+            </div>
+            <div class="flex md:gap-2 items-center md:flex-row flex-col gap-5">
+                <ul class="flex space-x-1">
+                    <li><a style=" background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)"
+                            class="text-2xl text-white font-bold rounded-full px-[5px]" href=""><i
+                                class="fa-brands fa-instagram  "></i></a></li>
+                    <li><a class="text-2xl bg-[#1877F2] text-white rounded-full px-[5px] " href=""><i
+                                class="fa-brands fa-facebook "></i></a></li>
+                    <li><a class="text-2xl  px-[5px] bg-[#00acee] rounded-full text-white" href=""><i
+                                class="fa-brands fa-twitter "></i></a></li>
+                </ul>
+
+                <button class="bg-[#0D6EFD] text-[#FFF] text-base font-medium px-4 py-2 rounded-md">join
+                    premium</button>
+            </div>
+
+           
+        </div>
+        <br>
+        <hr class="md:block hidden">
+        <br>
+        <div class="md:flex items-center justify-between hidden">
+            <div>
+                <ul class="font-medium text-base text-[#403F3F] cursor-pointer">
+                    <li>Product</li>
+                    <li>Browse jobs</li>
+                    <li>Remote jobs</li>
+                    <li> Startup jobs</li>
+                    <li>Company jobs</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="font-medium text-base text-[#403F3F] cursor-pointer">
+                    <li>Popular</li>
+                    <li>UIUX Design</li>
+                    <li>Product Design</li>
+                    <li>Back-End Developer</li>
+                    <li> Front-End Developer</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul class="font-medium text-base text-[#403F3F] cursor-pointer">
+                    <li>Resource</li>
+                    <li>Faq</li> 
+                    <li>Support</li>
+                    <li> Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul class="font-medium text-base text-[#403F3F] cursor-pointer">
+                    <li>Company</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Career Tips</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+
+        </div>
+        <br class="hidden md:block">
+        <p class="text-center font-medium text-[#706F6F]">copyright&#169; 2023 By team midgen & all right reserved. </p>
+    </footer>
+
+    <script src="./scriptFiles/script.js"></script>
+</body>
+
+</html>
