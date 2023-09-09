@@ -2,10 +2,12 @@ let cardContainer = document.getElementById("cardContainer");
 let showAllbtn = document.getElementById("showAllbtn");
 let modalContainer = document.getElementById("modalContainer");
 let notFound = document.getElementById("notfound");
+let spinner = document.getElementById('spinner')
 
 let isShow = false;
 let phName = "iphone";
 const loadData = async (name, sort = false) => {
+  spinner.classList.remove('hidden');
   if (name !== undefined) {
     phName = name;
   }
@@ -62,10 +64,12 @@ const loadData = async (name, sort = false) => {
 
         cardContainer.appendChild(div);
       });
+      spinner.classList.add('hidden')
     } else {
       showAllbtn.innerHTML = "";
 
       notFound.classList.remove("hidden");
+      spinner.classList.add('hidden')
     }
   } catch (error) {
     console.error(error);
